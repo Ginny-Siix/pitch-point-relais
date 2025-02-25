@@ -1,3 +1,4 @@
+/* Styles généraux */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -10,7 +11,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   margin: auto;
   overflow: hidden;
@@ -74,22 +75,27 @@ ul li {
 }
 
 .nav-button {
-    background-color: #712cca;
-    color: white;
-    border: 2px solid transparent; /* Bordure transparente par défaut */
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease; /* Transition sur tous les changements */
+  background-color: #712cca;
+  color: white;
+  border: 2px solid transparent; /* Bordure transparente par défaut */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Transition sur tous les changements */
 }
 
 .nav-button:hover {
-    background: linear-gradient(45deg, #9b59b6, #e91e63); /* Dégradé violet-rose */
-    color: white;
-    border: 2px solid #007bff; /* Bordure bleue */
+  background: linear-gradient(
+    45deg,
+    #9b59b6,
+    #e91e63
+  ); /* Dégradé violet-rose */
+  color: white;
+  border: 2px solid #007bff; /* Bordure bleue */
 }
-/* Animations */
+
+/* Animation de transition */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -103,4 +109,77 @@ ul li {
 
 .slide.active {
   animation: fadeIn 1s ease-out;
+}
+
+/* Styles pour les écrans de tablette */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    height: 70%; /* Un peu plus de place pour les boutons */
+  }
+
+  .active {
+    height: 100%;
+  }
+
+  .slide h1 {
+    font-size: 1.8em; /* Ajustement de la taille du titre */
+  }
+
+  .slide p,
+  .slide ul {
+    font-size: 1em; /* Réduction de la taille du texte pour les petits écrans */
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+    top: 60%;
+    left: 60%;
+  }
+
+  .nav-button {
+    width: 80%; /* Boutons plus larges */
+    margin: 10px 0;
+    font-size: 1em; /* Taille du texte réduite pour mieux s'adapter */
+    padding: 12px 20px;
+  }
+}
+
+/* Styles pour les petits écrans (mobiles) */
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .container {
+    width: 100%;
+    height: 60%;
+  }
+
+  .slide h1 {
+    font-size: 1.6em; /* Taille réduite pour les petits écrans */
+  }
+
+  .slide p,
+  .slide ul {
+    font-size: 0.9em;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+    top: 60%;
+    left: 55%;
+  }
+
+  .nav-button {
+    width: 90%; /* Boutons presque aussi larges que l'écran */
+    padding: 14px 20px;
+    font-size: 1em;
+  }
 }
