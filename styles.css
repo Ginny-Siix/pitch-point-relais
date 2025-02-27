@@ -16,7 +16,7 @@ body {
   margin: auto;
   overflow: hidden;
   position: relative;
-  height: 85%; /* Augmentation pour inclure les boutons */
+  height: 85%;
 }
 
 .slide {
@@ -46,18 +46,18 @@ body {
 .slide h1 {
   color: #712cca;
   font-size: 2em;
-  margin-bottom: 15px; /* Réduction de la marge */
+  margin-bottom: 15px;
 }
 
 .slide p,
 .slide ul {
   font-size: 1.2em;
-  line-height: 1.4; /* Réduction de l'interligne */
+  line-height: 1.4;
   color: #333;
 }
 
 .slide img {
-  width: 80%; /* Ajusté pour éviter que l'image prenne trop de place */
+  width: 100%; /* Ajustement pour que l'image soit responsive */
   max-width: 600px;
   margin-top: 15px;
   border-radius: 10px;
@@ -71,13 +71,13 @@ ul {
 }
 
 ul li {
-  margin: 10px 0; /* Espacement ajusté */
+  margin: 10px 0;
   display: flex;
   align-items: center;
 }
 
 ul li .tech-icon {
-  width: 30px; /* Ajustement de la taille des icônes */
+  width: 30px;
   margin-right: 10px;
 }
 
