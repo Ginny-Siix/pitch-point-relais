@@ -16,23 +16,26 @@ body {
   margin: auto;
   overflow: hidden;
   position: relative;
-  height: 80%; /* 80% de la hauteur de la fenêtre pour laisser de la place aux boutons */
+  height: 85%; /* Augmentation pour inclure les boutons */
 }
 
 .slide {
   opacity: 0;
   visibility: hidden;
-  padding-top: 50px;
+  padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
   margin-bottom: 20px;
-  position: absolute; /* Positionnement absolu pour superposer les slides */
+  position: absolute;
   top: 0;
-  bottom: 300px;
   width: 100%;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .active {
@@ -43,56 +46,67 @@ body {
 .slide h1 {
   color: #712cca;
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Réduction de la marge */
 }
 
 .slide p,
 .slide ul {
   font-size: 1.2em;
-  line-height: 1.6;
+  line-height: 1.4; /* Réduction de l'interligne */
   color: #333;
 }
 
+.slide img {
+  width: 80%; /* Ajusté pour éviter que l'image prenne trop de place */
+  max-width: 600px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste avec les icônes */
 ul {
   list-style: none;
   padding-left: 0;
 }
 
 ul li {
-  margin: 10px 0;
+  margin: 10px 0; /* Espacement ajusté */
+  display: flex;
+  align-items: center;
 }
 
-/* Positionnement des boutons dans le conteneur */
+ul li .tech-icon {
+  width: 30px; /* Ajustement de la taille des icônes */
+  margin-right: 10px;
+}
+
+/* Positionnement des boutons */
 .navigation {
   position: absolute;
-  top: 50%;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  width: 60%;
-  z-index: 10; /* Assure que les boutons sont au-dessus des diapositives */
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .nav-button {
   background-color: #712cca;
   color: white;
-  border: 2px solid transparent; /* Bordure transparente par défaut */
-  padding: 10px 20px;
-  font-size: 1.2em;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
-  transition: all 0.3s ease; /* Transition sur tous les changements */
+  transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background: linear-gradient(
-    45deg,
-    #9b59b6,
-    #e91e63
-  ); /* Dégradé violet-rose */
-  color: white;
-  border: 2px solid #007bff; /* Bordure bleue */
+  background: linear-gradient(45deg, #9b59b6, #e91e63);
+  border: 2px solid #007bff;
 }
 
 /* Animation de transition */
@@ -111,58 +125,49 @@ ul li {
   animation: fadeIn 1s ease-out;
 }
 
-/* Styles pour les écrans de tablette */
+/* Responsive */
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
   .container {
-    width: 100%;
-    height: 70%; /* Un peu plus de place pour les boutons */
+    height: 90%;
   }
 
-  .active {
-    height: 100%;
+  .slide {
+    padding: 20px;
   }
 
   .slide h1 {
-    font-size: 1.8em; /* Ajustement de la taille du titre */
+    font-size: 1.8em;
   }
 
   .slide p,
   .slide ul {
-    font-size: 1em; /* Réduction de la taille du texte pour les petits écrans */
+    font-size: 1em;
+  }
+
+  .slide img {
+    width: 95%;
   }
 
   .navigation {
+    bottom: 10px;
     flex-direction: column;
-    width: 100%;
-    top: 60%;
-    left: 60%;
+    align-items: center;
   }
 
   .nav-button {
-    width: 80%; /* Boutons plus larges */
-    margin: 10px 0;
-    font-size: 1em; /* Taille du texte réduite pour mieux s'adapter */
-    padding: 12px 20px;
+    width: 80%;
+    font-size: 1em;
+    padding: 12px;
   }
 }
 
-/* Styles pour les petits écrans (mobiles) */
 @media (max-width: 480px) {
-  body {
-    padding: 5px;
-  }
-
   .container {
-    width: 100%;
-    height: 60%;
+    height: 95%;
   }
 
   .slide h1 {
-    font-size: 1.6em; /* Taille réduite pour les petits écrans */
+    font-size: 1.6em;
   }
 
   .slide p,
@@ -171,15 +176,12 @@ ul li {
   }
 
   .navigation {
-    flex-direction: column;
-    width: 100%;
-    top: 60%;
-    left: 55%;
+    bottom: 5px;
   }
 
   .nav-button {
-    width: 90%; /* Boutons presque aussi larges que l'écran */
-    padding: 14px 20px;
-    font-size: 1em;
+    width: 90%;
+    padding: 10px;
+    font-size: 0.9em;
   }
 }

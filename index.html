@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Présentation - Projet Point Relais</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -11,6 +12,7 @@
       <div class="slide active">
         <h1>Projet : Plateforme de gestion pour point relais</h1>
         <p>Présenté par Cécile Lescaudron-Motte</p>
+        <img src="images/prez1.png" alt="Présentation du projet" />
       </div>
 
       <div class="slide">
@@ -21,62 +23,85 @@
           si un colis est arrivé<br />- Gestion du stock et des retraits
           compliquée
         </p>
+        <img src="images/prez2.png" alt="Problématique du projet" />
       </div>
 
       <div class="slide">
         <h1>La Solution</h1>
         <p>
           Un site web complet et intuitif qui facilite la gestion d’un point
-          relais !<br />Intégration des API UPS, Colissimo, DHL pour le suivi
-          des colis...
+          relais !<br />
+          Intégration du suivi des des principeaux transporteurs <br />
+          UPS, Colissimo, Dhl, ColisColis, Colis privé ...
         </p>
+        <img src="images/prez4.png" alt="Solution proposée" />
       </div>
 
       <div class="slide">
-        <h1>Fonctionnalités Clés</h1>
+        <h1>Fonctionnalités envisagée</h1>
         <ul>
-          <li>Suivi des colis</li>
-          <li>Prise de rendez-vous</li>
-          <li>Messagerie intégrée</li>
-          <li>Notification de fermeture exceptionnelle</li>
-          <li>Donner un pourboire</li>
-        </ul>
+          <li>📦 Suivi</li>
+          <li>📅 Rendez-vous</li>
+          <li>💬 Messagerie</li>
+          <li>⚠️ Fermetures</li>
+          <li>💰 Un petit geste pour un grand service</li>
+        </ul>        
+        <img src="images/prez3.png" alt="Fonctionnalités clés" />
       </div>
-
+            
       <div class="slide">
-        <h1>Technologies Utilisées</h1>
-        <ul>
-          <li>Frontend : React, HTML, CSS</li>
-          <li>Backend : Node.js, APIs (UPS, Colissimo, DHL)</li>
-          <li>Base de données : MongoDB</li>
-        </ul>
+        <h1>Audience et Avantages du Projet</h1>
+        <p><i class="fas fa-globe"></i> L’audience du projet, c’est *tout le monde*! <br />
+          Que vous soyez jeune ou moins jeune, tout le monde reçoit des colis aujourd’hui.</p>
+        
+        <p><i class="fas fa-laptop"></i> **Avantages** ? Un site web ET une application mobile pour répondre aux besoins de chacun. <br />
+          Ma grand-mère et ma mère, préfèrent les applis, tandis que d’autres sont plus à l’aise sur un PC.</p>
+        
+        <p><i class="fas fa-wheelchair"></i> De plus, le site et l'appli seront conçus pour être accessibles, <br />
+          afin de faciliter l'utilisation par les personnes en situation de handicap.</p>
+      
+        <img src="images/prez5.png" alt="Avantages du projet" />
       </div>
-
-      <div class="slide">
-        <h1>Avantages du Projet</h1>
-        <p>
-          Amélioration de l'efficacité, simplification des tâches et
-          amélioration de l'expérience client.
-        </p>
-      </div>
-
+      
       <div class="slide">
         <h1>Roadmap et Prochaines Étapes</h1>
         <p>
           Phase de développement, tests utilisateurs, mise en ligne et expansion
           des fonctionnalités.
         </p>
+        <img src="images/prez6.png" alt="Roadmap et prochaines étapes" />
       </div>
 
       <div class="slide">
         <h1>Pourquoi Rejoindre ce Projet ?</h1>
-        <p>
-          Un projet concret, une mise en pratique des compétences en
-          développement web et une opportunité de contribuer à un projet utile.
-        </p>
+        <p><i class="fas fa-exclamation-triangle"></i> Perdre un colis, c’est frustrant pour tout le monde. <br />
+          Quand cela arrive, la colère s’abat souvent sur la personne qui gère le point relais. <br />
+          Les clients n’hésitent pas à exprimer leur frustration.</p>
+
+        <p><i class="fas fa-heartbreak"></i> Et c’est encore plus difficile lorsque le colis perdu est un cadeau important : <br />
+          anniversaire, Saint-Valentin... <br />
+          des moments spéciaux ratés.</p>
+      
+        <p><i class="fas fa-box"></i> Chaque semaine, plusieurs colis sont renvoyés à cause du délai dépassé. <br />
+          Un système de gestion efficace pourrait éviter ces pertes <br />
+          et garantir une meilleure expérience pour tous.</p>        
+          <!-- <img src="images/prez6.png" alt="Pourquoi rejoindre ce projet ?" /> -->
       </div>
 
-      <!-- Boutons de navigation -->
+      <!-- Slide finale avec l'image en plein écran -->
+      <div class="slide">
+        <img src="images/prez7.png" alt="Image de fin" class="full-image" />
+        <div class="navigation">
+          <button class="nav-button" onclick="goToFirstSlide()">
+            Retour 1
+          </button>
+          <button class="nav-button" onclick="previousSlide()">
+            Précédent
+          </button>
+        </div>
+      </div>
+
+      <!-- Boutons de navigation pour toutes les autres slides -->
       <div class="navigation">
         <button class="nav-button" onclick="goToFirstSlide()">Retour 1</button>
         <button class="nav-button" onclick="previousSlide()">Précédent</button>
@@ -85,6 +110,5 @@
     </div>
 
     <script src="script.js"></script>
-    <!-- Placer le script à la fin -->
   </body>
 </html>
